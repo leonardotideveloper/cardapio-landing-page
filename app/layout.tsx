@@ -13,20 +13,8 @@ export const metadata: Metadata = {
   description: 'Transforme seu restaurante com um cardápio digital moderno e profissional. Aumente suas vendas e melhore a experiência dos seus clientes.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
     apple: '/apple-icon.png',
   },
 }
