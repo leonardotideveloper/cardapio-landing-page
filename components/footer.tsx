@@ -20,7 +20,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
-              Transformando a experiência gastronômica com cardápios digitais 
+              Transformando a experiência gastronômica com cardápios digitais
               modernos e inteligentes.
             </p>
           </div>
@@ -44,6 +44,11 @@ export function Footer() {
                   Contato
                 </Link>
               </li>
+              <li>
+                <Link href="#planos" className="text-background/70 hover:text-background text-sm transition-colors">
+                  Planos
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -52,9 +57,9 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">Contato</h4>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="https://wa.me/5511932599750" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/5511932599750"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-background/70 hover:text-background text-sm transition-colors"
                 >
@@ -69,8 +74,8 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-background mb-4">Redes Sociais</h4>
             <div className="flex gap-4">
-              <a 
-                href="https://instagram.com/cardapiopro" 
+              <a
+                href="https://instagram.com/cardapiopro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
