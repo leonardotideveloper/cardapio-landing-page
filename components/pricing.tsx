@@ -16,11 +16,11 @@ const plans = [
       { name: "Atualizações em tempo real", included: true },
       { name: "Suporte por email", included: true },
       { name: "Gestão de categorias", included: true },
+      { name: "KDS - Kitchen Display", included: true },
+      { name: "Roteirização de entregas", included: true },
       { name: "Automação de CRM", included: false },
       { name: "Integração WhatsApp", included: false },
       { name: "Pagamento online", included: false },
-      { name: "KDS - Kitchen Display", included: false },
-      { name: "Roteirização de entregas", included: false },
     ],
     cta: "Começar Agora",
     href: "#contato"
