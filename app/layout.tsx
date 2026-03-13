@@ -9,36 +9,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cardapio.webpro.app.br'),
   title: 'Cardápio Pro | Cardápio Digital para Restaurantes',
   description: 'Transforme seu restaurante com um cardápio digital moderno e profissional. Aumente suas vendas e melhore a experiência dos seus clientes.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/apple-icon.png',
-  },
-  openGraph: {
-    title: 'Cardápio Pro | Cardápio Digital para Restaurantes',
-    description: 'Transforme seu restaurante com um cardápio digital moderno e profissional. Aumente suas vendas e melhore a experiência dos seus clientes.',
-    url: 'https://cardapio.webpro.app.br',
-    siteName: 'Cardápio Pro',
-    locale: 'pt_BR',
-    type: 'website',
-    images: [
+    icon: [
       {
-        url: '/favicon.png',
-        width: 1024,
-        height: 1024,
-        alt: 'Cardápio Pro',
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Cardápio Pro | Cardápio Digital para Restaurantes',
-    description: 'Transforme seu restaurante com um cardápio digital moderno e profissional. Aumente suas vendas e melhore a experiência dos seus clientes.',
-    images: ['/favicon.png'],
+    apple: '/apple-icon.png',
   },
 }
 
