@@ -20,27 +20,14 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-
-    const normalizedMessage =
-      formData.message.trim().length >= 10
-        ? formData.message.trim()
-        : "Olá! Gostaria de receber uma proposta personalizada para meu estabelecimento."
-
-    const payload = {
-      name: formData.name.trim(),
-      email: formData.email.trim(),
-      phone: formData.phone.trim() || null,
-      company: formData.restaurant.trim() || null,
-      message: normalizedMessage,
-    }
-
+    
     try {
-      const response = await fetch("https://webpro.app.br/proposal-email", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(formData),
       })
 
       if (response.ok) {
@@ -174,7 +161,6 @@ export function ContactForm() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  maxLength={4000}
                   className="resize-none"
                 />
               </div>

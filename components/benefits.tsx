@@ -22,7 +22,7 @@ export function Benefits() {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Mais de 200 restaurantes já transformaram sua operação com nossa 
+              Mais de 500 restaurantes já transformaram sua operação com nossa 
               plataforma. Veja os benefícios que você terá:
             </p>
 
