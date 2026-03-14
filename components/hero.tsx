@@ -46,7 +46,7 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
               <div>
-                <p className="text-2xl md:text-3xl font-bold text-foreground">500+</p>
+                <p className="text-2xl md:text-3xl font-bold text-foreground">200</p>
                 <p className="text-sm text-muted-foreground">Restaurantes</p>
               </div>
               <div>
