@@ -6,6 +6,12 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Send, CheckCircle, Loader2 } from "lucide-react"
 
+const PROPOSAL_API_URL =
+  process.env.NEXT_PUBLIC_PROPOSAL_API_URL ?? "https://webpro.app.br/api/proposal-email"
+const MIN_MESSAGE_LENGTH = 10
+const DEFAULT_PROPOSAL_MESSAGE =
+  "Ola! Gostaria de receber uma proposta comercial para o meu estabelecimento."
+
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -20,14 +26,26 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+
+    const normalizedMessage = formData.message.trim()
+    const payload = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || null,
+      company: formData.restaurant.trim() || null,
+      message:
+        normalizedMessage.length >= MIN_MESSAGE_LENGTH
+          ? normalizedMessage
+          : DEFAULT_PROPOSAL_MESSAGE,
+    }
     
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(PROPOSAL_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       })
 
       if (response.ok) {
